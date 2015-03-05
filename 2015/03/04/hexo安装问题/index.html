@@ -5,15 +5,19 @@
   
   <title>hexo安装问题 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="安装hexo成功之后，若再次安装可能会报错，但是可以忽略，直接输入博客初始化命令hexo init blog，之后创建博客名称，记住执行hexo g来生成静态网页(很重要)，部署到本地hexo s，最终部署到github命令为hexo d,博客在md文件中进行书写或者修改，写完后保存，然后通过hexo g和hexo d命令发布到网络上的博客中">
+  <meta name="description" content="hexo部署到Github之后访问博客返回404的问题及其解决办法
+问题描述：昨天在部署hexo的过程中，完成所有步骤之后对自己的博客地址进行访问出现了无法找到博客返回404页面的问题，仔细检查之后发现在创建github项目的时候项目名称应该创建为“用户名.github.io”的形式，而昨天在github上创建项目时创建了github用户名.github.io为名称的项目，创建项目的名称出错会直接">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo安装问题">
 <meta property="og:url" content="http://yoursite.com/2015/03/04/hexo安装问题/">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="安装hexo成功之后，若再次安装可能会报错，但是可以忽略，直接输入博客初始化命令hexo init blog，之后创建博客名称，记住执行hexo g来生成静态网页(很重要)，部署到本地hexo s，最终部署到github命令为hexo d,博客在md文件中进行书写或者修改，写完后保存，然后通过hexo g和hexo d命令发布到网络上的博客中">
+<meta property="og:description" content="hexo部署到Github之后访问博客返回404的问题及其解决办法
+问题描述：昨天在部署hexo的过程中，完成所有步骤之后对自己的博客地址进行访问出现了无法找到博客返回404页面的问题，仔细检查之后发现在创建github项目的时候项目名称应该创建为“用户名.github.io”的形式，而昨天在github上创建项目时创建了github用户名.github.io为名称的项目，创建项目的名称出错会直接">
+<meta property="og:image" content="http://fmn.rrimg.com/fmn063/20150305/1115/original_spqJ_7bbc00020caf125f.jpg">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo安装问题">
-<meta name="twitter:description" content="安装hexo成功之后，若再次安装可能会报错，但是可以忽略，直接输入博客初始化命令hexo init blog，之后创建博客名称，记住执行hexo g来生成静态网页(很重要)，部署到本地hexo s，最终部署到github命令为hexo d,博客在md文件中进行书写或者修改，写完后保存，然后通过hexo g和hexo d命令发布到网络上的博客中">
+<meta name="twitter:description" content="hexo部署到Github之后访问博客返回404的问题及其解决办法
+问题描述：昨天在部署hexo的过程中，完成所有步骤之后对自己的博客地址进行访问出现了无法找到博客返回404页面的问题，仔细检查之后发现在创建github项目的时候项目名称应该创建为“用户名.github.io”的形式，而昨天在github上创建项目时创建了github用户名.github.io为名称的项目，创建项目的名称出错会直接">
 
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -83,12 +87,27 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><em>安装hexo成功之后，若再次安装可能会报错，但是可以忽略，直接输入博客初始化命令hexo init blog<br>，之后创建博客名称，记住执行hexo g来生成静态网页(很重要)，部署到本地hexo s，最终部署到github命令为hexo d,博客在md文件中进行书写或者修改，写完后保存，然后通过hexo g和hexo d命令发布到网络上的博客中</em></p>
+        <h1 id="hexo部署到Github之后访问博客返回404的问题及其解决办法">hexo部署到Github之后访问博客返回404的问题及其解决办法</h1>
+<h2 id="问题描述：昨天在部署hexo的过程中，完成所有步骤之后对自己的博客地址进行访问出现了无法找到博客返回404页面的问题，仔细检查之后发现在创建github项目的时候项目名称应该创建为“用户名-github-io”的形式，而昨天在github上创建项目时创建了github用户名-github-io为名称的项目，创建项目的名称出错会直接影响到后续的部署，所以创建项目时一定要认真检查，并且区分大小写。">问题描述：昨天在部署hexo的过程中，完成所有步骤之后对自己的博客地址进行访问出现了无法找到博客返回404页面的问题，仔细检查之后发现在创建github项目的时候项目名称应该创建为“用户名.github.io”的形式，而昨天在github上创建项目时创建了github用户名.github.io为名称的项目，创建项目的名称出错会直接影响到后续的部署，所以创建项目时一定要认真检查，并且区分大小写。</h2>
+<p>解决方法：<br>  1.删除掉当前创建的项目，从新以“用户名.github.io”为名创建项目。<br>  2.创建之后需要对_config.yml文件再次进行编辑，将repository中的改为新创建的项目的SSH，即<img src="http://fmn.rrimg.com/fmn063/20150305/1115/original_spqJ_7bbc00020caf125f.jpg" alt=""></p>
+<p>  3.初始化hexo博客，命令</p>
+<figure class="highlight hexo"><figcaption><span>init blog```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">由于之前已经安装了<span class="built_in">npm</span>所以这里无需再次安装，然后创建博客标题</div></pre></td></tr></table></figure>
+
+<p>hexo n “博客标题”</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">之后执行命令</div></pre></td></tr></table></figure>
+
+<p>hexo g</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">该命令用于生成静态网页，否则访问博客是还是会返回404页面，之后执行命令</div></pre></td></tr></table></figure>
+
+<p>hexo s</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">该命令用于将博客发布到本地服务器进行预览，本地服务器地址默认为localhost：4000，在浏览器地址栏中输入即可在本地查看博客，最后执行命令</div></pre></td></tr></table></figure>
+
+<p>hexo d```<br>     该命令用于将博客部署到网络上，之后在地址栏输入用户名.github.io就可以看到写好的博客了           </p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/03/04/hexo安装问题/" data-id="fm37j5onqy8x5ddr" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/03/04/hexo安装问题/" data-id="t7jvfayjjjwtijob" class="article-share-link">Share</a>
       
       
     </footer>
