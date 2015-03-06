@@ -63,6 +63,48 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-文字与图片并行放置效果" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/03/06/文字与图片并行放置效果/" class="article-date">
+  <time datetime="2015-03-06T07:25:12.000Z" itemprop="datePublished">Mar 6 2015</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/03/06/文字与图片并行放置效果/">文字与图片并行放置效果</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="如何将图片与文字说明并排放置且文字不环绕图片">如何将图片与文字说明并排放置且文字不环绕图片</h1>
+<hr>
+<p>   现在希望完成一种效果例如<a href="http://fmn.rrimg.com/fmn064/20150306/1440/large_Mbxl_41490003c1ca118c.jpg" target="_blank" rel="external">点这里</a>所示希望可以将标题放置在图片的右侧，<em>并且在文字换行的时候文字不能包围图像底部，而是文字整体都在图像右侧</em>。</p>
+<p>制作方法<br>    1.首先通过html中的table元素创建一个一行两列的表格，设置向表格中插入相应能够的元素边界为不可见。<br>    2.向表格中插入相应的元素，将图片插入第一行第一列，并且将文字插入第一行第二列，这样就可以看到文字放置在图片的右侧。<br>    3.为了防止文字过多时而换行会时图片会默认放置在表格的中部，这里对表格的（注意不是图片的）文本对齐属性vertical-align设置为top是图片始终位于表格的顶部，最终效果为<a href="http://fmn.rrimg.com/fmn065/20150306/1440/original_nwMg_41f90003c27f118c.jpg" target="_blank" rel="external">点这里</a><br>    代码：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="doctype">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">META</span> <span class="attribute">HTTP-EQUIV</span>=<span class="value">"Content-Type"</span> <span class="attribute">CONTENT</span>=<span class="value">"text/html; charset=UTF-8"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css"></span></div><div class="line"><span class="tag">td</span><span class="class">.abc</span> </div><div class="line"><span class="rules">{</span></div><div class="line"><span class="rule"><span class="attribute">color</span>:<span class="value">red</span></span>;</div><div class="line"><span class="rule"><span class="attribute">font-weight</span>:<span class="value">bold</span></span>;</div><div class="line"><span class="rule"><span class="attribute">font-size</span>:<span class="value"> <span class="number">46px</span></span></span>;</div><div class="line"><span class="rule"><span class="attribute">border-width</span>:<span class="value"> <span class="number">100px</span></span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="tag">&lt;/<span class="title">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">table</span> &gt;</span></div><div class="line">	<span class="tag">&lt;<span class="title">tr</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="title">td</span> <span class="attribute">style</span>=<span class="value">"vertical-align:top;"</span>&gt;</span><span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"标题箭头.png"</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="title">td</span> <span class="attribute">class</span>=<span class="value">"abc"</span> <span class="attribute">width</span>=<span class="value">"1000"</span>&gt;</span>quotes也需要使用真不知道他有什么优势，或许可以在quotes定义大量的文字或者符号，而content中引用就是它的优势。<span class="tag">&lt;/<span class="title">td</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="title">tr</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">table</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></div></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/03/06/文字与图片并行放置效果/" data-id="gf7d4peswflov8o9" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-hexo安装问题" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/03/04/hexo安装问题/" class="article-date">
@@ -110,7 +152,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/03/04/hexo安装问题/" data-id="jaawy7iszn9i6f1k" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/03/04/hexo安装问题/" data-id="8gw9y45m5if0oyxk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -164,7 +206,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/03/04/hello-world/" data-id="w3r6ik0o9i6542p8" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/03/04/hello-world/" data-id="6x0g2fnae1t1n1c0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -189,7 +231,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -199,6 +241,10 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2015/03/06/文字与图片并行放置效果/">文字与图片并行放置效果</a>
+          </li>
         
           <li>
             <a href="/2015/03/04/hexo安装问题/">hexo安装问题</a>
